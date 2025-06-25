@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unbeatable Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">🎮 Unbeatable RPS</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">You</span>
+                    <span class="score" id="playerScore">0</span>
+                </div>
+                <div class="score-divider">:</div>
+                <div class="score-item">
+                    <span class="label">AI</span>
+                    <span class="score" id="aiScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="choices-display">
+                <div class="choice-container">
+                    <div class="choice-circle player-choice" id="playerChoice">
+                        <span class="choice-emoji">❓</span>
+                    </div>
+                    <p class="choice-label">Your Choice</p>
+                </div>
+                
+                <div class="vs-indicator">
+                    <span class="vs-text">VS</span>
+                </div>
+                
+                <div class="choice-container">
+                    <div class="choice-circle ai-choice" id="aiChoice">
+                        <span class="choice-emoji">❓</span>
+                    </div>
+                    <p class="choice-label">AI Choice</p>
+                </div>
+            </div>
+
+            <div class="result-display" id="resultDisplay">
+                <p class="result-text">Make your choice!</p>
+            </div>
+
+            <div class="game-controls">
+                <button class="choice-btn" data-choice="rock">
+                    <span class="btn-emoji">🪨</span>
+                    <span class="btn-text">Rock</span>
+                </button>
+                <button class="choice-btn" data-choice="paper">
+                    <span class="btn-emoji">📄</span>
+                    <span class="btn-text">Paper</span>
+                </button>
+                <button class="choice-btn" data-choice="scissors">
+                    <span class="btn-emoji">✂️</span>
+                    <span class="btn-text">Scissors</span>
+                </button>
+            </div>
+
+            <div class="game-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Games Played</span>
+                    <span class="stat-value" id="gamesPlayed">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Win Rate</span>
+                    <span class="stat-value" id="winRate">0%</span>
+                </div>
+            </div>
+
+            <button class="reset-btn" id="resetBtn">🔄 Reset Game</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
